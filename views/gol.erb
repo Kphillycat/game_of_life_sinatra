@@ -1,0 +1,7 @@
+<h1>Game of Life</h1>
+<% @cur_world.board.each do |row| %>
+	<% row.each do |value| %>
+		<%= value.alive? ? " * " : " . " %>
+	<%end%>
+	<br />
+<%end%>
