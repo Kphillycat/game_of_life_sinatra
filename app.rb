@@ -20,7 +20,6 @@ module Gol
 
     #routes
     get '/' do
-      # <meta http-equiv="refresh" content="0.1" >
       erb :index
     end
 
