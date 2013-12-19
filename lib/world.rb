@@ -2,12 +2,13 @@ require_relative './cell'
 
 class World
 	#keeps track of new cells
-	attr_accessor :cells, :board
+	attr_accessor :cells, :board, :tick_ct
 
 	def initialize	
 		@rows = 25
 		@columns = 25
 		@cells = [] 
+		@tick_ct = 0
 		build_board
 	end
 
@@ -34,6 +35,7 @@ class World
 
 
 	def tick! #cells should be processed through rules
+		self.tick_ct += 1 unless self.tick_ct.nil?
 		die_array = [] #cells marked for DEATH!!
 		alive_array = [] #cells marked to come alive
 		cells.each do |cell|
@@ -52,7 +54,8 @@ class World
 		
 		die_array.each {|cell| cell.die!}
 		alive_array.each {|cell| cell.born!}
-
+		
+		
 	end
 
 end

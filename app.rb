@@ -7,7 +7,7 @@ end
 
 module Gol
   class App < Sinatra::Application
-
+    
     @@da_world = World.new
     @game = Set_up.new(@@da_world)
     @game.random_formation
@@ -24,8 +24,13 @@ module Gol
     end
 
     get '/gol' do
-      @cur_world = @@da_world
-      @cur_world.tick!
+      @cur_world = @@da_world      
+      @@da_world.tick!
+      if @cur_world.tick_ct == 20
+        @refresh = ""
+      else
+        @refresh = "<meta http-equiv='refresh' content='0.1' >"
+      end
       erb :gol
     end
 
