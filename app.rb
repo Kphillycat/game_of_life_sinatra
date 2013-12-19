@@ -5,7 +5,7 @@ Dir.glob('./lib/*.rb') do |model|
   require model
 end
 
-module Name
+module Gol
   class App < Sinatra::Application
 
     @@da_world = World.new
