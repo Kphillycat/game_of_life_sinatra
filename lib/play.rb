@@ -1,6 +1,5 @@
 require_relative './cell'
 require_relative './world'
-require 'debugger'
 
 class Set_up
 	attr_accessor :world

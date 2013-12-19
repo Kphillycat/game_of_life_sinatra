@@ -1,5 +1,4 @@
 require_relative './cell'
-require 'debugger'
 
 class World
 	#keeps track of new cells

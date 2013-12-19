@@ -1,5 +1,3 @@
-require 'debugger'
-
 class Cell
 	attr_accessor :world, :x, :y, :alive
 
