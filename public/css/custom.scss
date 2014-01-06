@@ -1,0 +1,29 @@
+@import "css/bootstrap.min.css";
+
+body {
+        background-color: black;
+}
+
+#container {
+        display: inline-block;
+        width: 400;
+        height: 400;
+        margin: 0 auto;
+}
+
+.cell {
+    background-color: green;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 20;
+    left: 20;
+}
+
+.cell alive {
+    background-color: blue
+}
+
+.cell dead {
+    background-color: red
+}

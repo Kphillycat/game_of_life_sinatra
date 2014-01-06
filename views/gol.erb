@@ -3,9 +3,9 @@
 <div id="container">
 <% @cur_world.board.each do |row| %>
 	<% row.each do |value| %>
-		<%= value.alive? ? "*" : "." %>
+		<div class= "cell <%= value.alive? ? "alive" : "dead" %>"></div>
 	<%end%>
-	<br />
+	
 <%end%>
 </div>
 <h5>Muhahahahahahahaha</h5>
