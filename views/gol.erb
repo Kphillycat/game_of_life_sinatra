@@ -3,7 +3,7 @@
 <div id="container">
 <% @cur_world.board.each do |row| %>
 	<% row.each do |value| %>
-		<div class= "cell <%= value.alive? ? "alive" : "dead" %>"></div>
+		<div class = "cell <%= value.alive? ? "alive" : "dead" %>"></div>
 	<%end%>
 	
 <%end%>

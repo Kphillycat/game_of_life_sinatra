@@ -1,4 +1,4 @@
-@import "css/bootstrap.min.css";
+@import "../css/bootstrap.min.css";
 
 body {
         background-color: black;
@@ -20,10 +20,10 @@ body {
     left: 20;
 }
 
-.cell alive {
-    background-color: blue
+.cell.alive {
+    background-color: blue;
 }
 
-.cell dead {
-    background-color: red
+.cell.dead {
+    background-color: red;
 }
